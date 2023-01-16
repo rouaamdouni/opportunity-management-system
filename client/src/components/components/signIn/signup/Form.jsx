@@ -13,7 +13,7 @@ export default function Form() {
     const navigate = useNavigate();
     const data={username:username,password:password,email:email}
     const HandleClick =()=>{
-        fetch('http://localhost:3000/signup', {
+        fetch('http://localhost:3000/SignUp', {
             method: 'POST', // or 'PUT'
             headers: {
               'Content-Type': 'application/json',
