@@ -10,7 +10,7 @@ export default function MainRouter()
         <UserContext.Provider value={{user,setUser}}>
         <Routes>
             <Route path="/" element={<SignIn />} />
-            <Route path="/signup" element={ <SingUp/> } />
+            <Route path="/SignUp" element={ <SingUp/> } />
             <Route path="/homepage" element={ <Homepage /> } />
         </Routes>
         </UserContext.Provider>
