@@ -13,7 +13,7 @@ export default function Form() {
     const navigate = useNavigate();
     const data={username:username,password:password,email:email}
     const HandleClick =()=>{
-        fetch('http://localhost:3000/SignUp', {
+        fetch('http://localhost:4000/SignUp', {
             method: 'POST', // or 'PUT'
             headers: {
               'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default function Form() {
                   'success'
                 )
                 setTimeout(()=> {
-                  navigate("/SignIn");
+                  navigate("/");
                 },1000);
                 
               }

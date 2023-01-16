@@ -15,7 +15,7 @@ function Sform() {
   const data = { password: password, email: email };
   const { user, setUser } = useContext(UserContext);
   const HandleClick = () => {
-    fetch('http://localhost:3000/SignIn', {
+    fetch('http://localhost:4000/', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function Sform() {
 
         else {
           localStorage.setItem("token", data.token);
-          navigate("/");
+          navigate("/Homepage");
           var token = localStorage.getItem("token");
           var decoded = jwt_decode(token);
           const { username } = decoded;

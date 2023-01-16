@@ -11,7 +11,7 @@ export default function MainRouter()
         <Routes>
             <Route path="/" element={<SignIn />} />
             <Route path="/SignUp" element={ <SingUp/> } />
-            <Route path="/homepage" element={ <Homepage /> } />
+            <Route path="/Homepage" element={ <Homepage /> } />
         </Routes>
         </UserContext.Provider>
         )
