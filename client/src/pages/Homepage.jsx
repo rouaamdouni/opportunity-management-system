@@ -1,7 +1,9 @@
+import OpportunitiesList from "../components/components/signIn/OpportunitiesList.js"
+
 export default function Homepage(){
 return(
     <div>
-        <h1>Homepage</h1>
+        <OpportunitiesList/>
     </div>
 )
 }
