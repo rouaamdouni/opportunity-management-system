@@ -1,6 +1,6 @@
-import opportunity from "../models/opportunity.model.js";
+import opportunity from "../models/Opportunity.model.js";
  
-export const getopportunities = async (req, res) => {
+export const getOpportunity = async (req, res) => {
     try {
         const opportunitys = await opportunity.find();
         res.json(opportunitys);

@@ -6,6 +6,7 @@ var http = require('http');
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const userRoute=require('./routers/user.route')
+  
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));

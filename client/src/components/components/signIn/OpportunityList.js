@@ -6,20 +6,26 @@ const OpportunityList = () => {
   const [Opportunitys, setOpportunity] = useState([]);
 
   useEffect(() => {
-    getOpportunities();
+    getOpportunity();
   }, []);
 
-  const getOpportunities = async () => {
-    const response = await axios.get("http://127.0.0.1:4000/Opportunities");
-    setOpportunity(response.data);
+  const getOpportunity = async () => {
+    const response = await axios.get("http://127.0.0.1:4000/Opportunity");
+    try {
+      setOpportunity(response.data);
+
+    }
+    catch (error) {
+      alert(error);
+    }
   };
 
   const deleteOpportunity = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:4000/Opportunities/${id}`);
-      getOpportunities();
+      await axios.delete(`http://127.0.0.1:4000/Opportunity/${id}`);
+      getOpportunity();
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 

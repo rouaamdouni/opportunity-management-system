@@ -11,14 +11,14 @@ const AddOpportunity = () => {
   const saveOpportunity = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:4000/Opportunities", {
+      await axios.post("http://127.0.0.1:4000/Opportunity", {
         name,
         email,
         gender,
       });
       navigate("/");
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 
