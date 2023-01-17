@@ -6,7 +6,7 @@ let schemaUser = mongoose.Schema({
   email: String,
   password: String,
 });
-let url = "mongodb://localhost:27017/pikoroBD";
+let url = "mongodb://0.0.0.0:27017/pikoroBD";
 var User = mongoose.model("user", schemaUser);
 var privatekey = "this is my secret key djhdk";
 exports.register = (username, email, password) => {

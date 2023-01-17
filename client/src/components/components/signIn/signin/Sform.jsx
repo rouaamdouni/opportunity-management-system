@@ -15,7 +15,7 @@ function Sform() {
   const data = { password: password, email: email };
   const { user, setUser } = useContext(UserContext);
   const HandleClick = () => {
-    fetch('http://localhost:4000/', {
+    fetch('http://127.0.0.1:4000/', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',

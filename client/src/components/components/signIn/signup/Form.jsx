@@ -13,7 +13,7 @@ export default function Form() {
     const navigate = useNavigate();
     const data={username:username,password:password,email:email}
     const HandleClick =()=>{
-        fetch('http://localhost:4000/SignUp', {
+        fetch('http://127.0.0.1:4000/SignUp', {
             method: 'POST', // or 'PUT'
             headers: {
               'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export default function Form() {
               }
             })
             .catch((error) => {
-             console.log(error);
+             alert(error);
             });
     }
 
